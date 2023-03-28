@@ -1,7 +1,6 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
-from wordcloud import WordCloud
 import seaborn as sns
 import processor
 import Analysis
@@ -81,23 +80,23 @@ if user_file is not None:
         # subplot 2: Term
         plt.figure(figsize=(18, 25))
         plt.subplot(4, 2, 2)
-        sns.countplot(x='term', width=0.2, palette='gist_heat_r', data=fully_paid)
+        sns.countplot(x='term', palette='gist_heat_r', data=fully_paid)
         plt.title("Term of Months", size=20)
         st.set_option('deprecation.showPyplotGlobalUse', False)
         st.pyplot()
 
     with tab3:
-        st.header("An owl")
+        st.header("Grade")
         plt.figure(figsize=(18, 25))
         plt.subplot(4, 2, 3)
-        sns.countplot(x='grade', width=0.5, palette='gist_heat_r', data=fully_paid)
+        sns.countplot(x='grade', palette='gist_heat_r', data=fully_paid)
         plt.title("Grade of User", size=20)
         st.set_option('deprecation.showPyplotGlobalUse', False)
         st.pyplot()
     with tab4:
         plt.figure(figsize=(18, 25))
         plt.subplot(4, 2, 4)
-        sns.countplot(x='home_ownership', width=0.5, palette='gist_heat_r', data=fully_paid)
+        sns.countplot(x='home_ownership', palette='gist_heat_r', data=fully_paid)
         plt.title("Home Ownership", size=20)
         st.set_option('deprecation.showPyplotGlobalUse', False)
         st.pyplot()
@@ -136,7 +135,7 @@ if user_file is not None:
         # subplot 2: Term
         plt.figure(figsize=(18, 25))
         plt.subplot(4, 2, 2)
-        sns.countplot(x='term', width=0.2, palette='gist_heat_r', data=charge_off)
+        sns.countplot(x='term', palette='gist_heat_r', data=charge_off)
         plt.title("Term of Months", size=20)
         st.set_option('deprecation.showPyplotGlobalUse', False)
         st.pyplot()
@@ -145,14 +144,14 @@ if user_file is not None:
         st.header("An owl")
         plt.figure(figsize=(18, 25))
         plt.subplot(4, 2, 3)
-        sns.countplot(x='grade', width=0.5, palette='gist_heat_r', data=charge_off)
+        sns.countplot(x='grade', palette='gist_heat_r', data=charge_off)
         plt.title("Grade of User", size=20)
         st.set_option('deprecation.showPyplotGlobalUse', False)
         st.pyplot()
     with tab4:
         plt.figure(figsize=(18, 25))
         plt.subplot(4, 2, 4)
-        sns.countplot(x='home_ownership', width=0.5, palette='gist_heat_r', data=charge_off)
+        sns.countplot(x='home_ownership', palette='gist_heat_r', data=charge_off)
         plt.title("Home Ownership", size=20)
         st.set_option('deprecation.showPyplotGlobalUse', False)
         st.pyplot()
@@ -194,7 +193,7 @@ if user_file is not None:
         # subplot 2: Term
         plt.figure(figsize=(18, 25))
         plt.subplot(4, 2, 2)
-        sns.countplot(x='term', width=0.2, palette='gist_heat_r', data=current)
+        sns.countplot(x='term', palette='gist_heat_r', data=current)
         plt.title("Term of Months", size=20)
         st.set_option('deprecation.showPyplotGlobalUse', False)
         st.pyplot()
@@ -203,14 +202,14 @@ if user_file is not None:
         st.header("An owl")
         plt.figure(figsize=(18, 25))
         plt.subplot(4, 2, 3)
-        sns.countplot(x='grade', width=0.5, palette='gist_heat_r', data=current)
+        sns.countplot(x='grade', palette='gist_heat_r', data=current)
         plt.title("Grade of User", size=20)
         st.set_option('deprecation.showPyplotGlobalUse', False)
         st.pyplot()
     with tab4:
         plt.figure(figsize=(18, 25))
         plt.subplot(4, 2, 4)
-        sns.countplot(x='home_ownership', width=0.5, palette='gist_heat_r', data=current)
+        sns.countplot(x='home_ownership', palette='gist_heat_r', data=current)
         plt.title("Home Ownership", size=20)
         st.set_option('deprecation.showPyplotGlobalUse', False)
         st.pyplot()
