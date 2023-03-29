@@ -257,7 +257,7 @@ if user_file is not None:
         st.set_option('deprecation.showPyplotGlobalUse', False)
         st.pyplot()
         # conclustion
-        st.write("It can be seen that applicant take a loan for 60 months whose current status is Fully Paid")
+        st.write("It can be seen that applicant take a loan for 60 months whose current status is Current")
     with tab3:
         st.header("An owl")
         plt.figure(figsize=(18, 25))
