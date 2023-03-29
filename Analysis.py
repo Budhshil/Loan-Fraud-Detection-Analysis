@@ -23,13 +23,13 @@ def chargedoff(data):
     return charge_off
 
 def fullypaidcorr(data):
-    fully_paid = data[data['loan_status'] == 'Fully Paid'].head(10)
+    fully_paid = data[data['loan_status'] == 'Fully Paid']
     correlation = fully_paid[['member_id', 'loan_amnt', 'funded_amnt', 'installment', 'total_rec_int', 'last_pymnt_amnt']].corr()
 
     return correlation
 
 def chargedoffcorr(data):
-    charged_off = data[data['loan_status'] == 'Charged Off'].head(10)
+    charged_off = data[data['loan_status'] == 'Charged Off']
     correlation = charged_off[['member_id', 'loan_amnt', 'funded_amnt', 'installment', 'total_rec_int', 'last_pymnt_amnt']].corr()
 
     return correlation
@@ -39,7 +39,7 @@ def current_u(data):
     return current
 
 def currentcorr(data):
-    current = data[data['loan_status'] == 'Charged Off'].head(10)
+    current = data[data['loan_status'] == 'Charged Off']
     correlation = current[['member_id', 'loan_amnt', 'funded_amnt', 'installment', 'total_rec_int', 'last_pymnt_amnt']].corr()
 
     return correlation
